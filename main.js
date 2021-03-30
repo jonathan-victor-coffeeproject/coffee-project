@@ -58,6 +58,10 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+var coffeelist =document.querySelector("coffee-name")
+
+coffeelist.addEventListener('keyup', updateCoffees)
+
 
 
 
