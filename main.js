@@ -2,13 +2,15 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<div>' + coffee.id + '</div>';
-    html += '<h4>' + coffee.name + '</h4>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<div class="d-flex align-items-baseline">';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p class="ml-2 text-secondary">' + coffee.roast + '</p>';
+    html += '</div>';
     html += '</div>';
 
     return html;
 }
+
 
 function renderCoffees(coffees) {
     var html = '';
@@ -55,3 +57,7 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+
+
