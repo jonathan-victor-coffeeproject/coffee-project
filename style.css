@@ -1,7 +1,76 @@
-.mb-3{
-width: 100%;
+{
+    transform: translate3d(10, 10, 10);
 }
 
-.hidden {
-    display: none;
+.my-main{
+    height: 700px;
 }
+
+
+
+div{
+
+    transition:  2s;
+}
+
+
+.my-holder{
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.waves{
+
+    position: sticky;
+    width: 200%;
+    height: 100%;
+    animation: waves 12s linear infinite;
+    filter:blur(.3px);
+    opacity: 1;
+    bottom: 0px;
+    z-index: 2;
+
+
+
+
+
+}
+
+#mySidenav{
+    position: absolute;
+    z-index: 55;;
+}
+
+
+
+
+
+
+
+@keyframes waves {
+    0%    {
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+
+.pulsate-bck, {-webkit-animation:pulsate-bck 4s ease-in-out infinite both;animation:pulsate-bck 4s ease-in-out infinite both}
+
+
+
+@-webkit-keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+
+
+
+
+.puff-in-center , #main ,h2 {-webkit-animation:puff-in-center 1s cubic-bezier(.47,0.000,.745,.715) both;animation:puff-in-center 1s cubic-bezier(.47,0.000,.745,.715) both}
+
+
+
+@-webkit-keyframes puf
