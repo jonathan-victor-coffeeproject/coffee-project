@@ -2,7 +2,6 @@
 width: 100%;
 }
 
-.autocomplete {
-    position: relative;
-    display: inline-block;
+.hidden {
+    display: none;
 }
