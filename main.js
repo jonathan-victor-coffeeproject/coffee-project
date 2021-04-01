@@ -27,14 +27,35 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var coffeNameInput = coffeeName.value.toLowerCase();
     var filteredCoffees = [];
+
     coffees.forEach(function(coffee) {
+
+    for (let i = 0; i < coffees.length; i++){
+        let coffee = coffees[i];
+
         if (coffee.roast === selectedRoast && coffee.name.toLowerCase().indexOf(coffeNameInput) !== -1) {
             filteredCoffees.push(coffee);
         }else if(selectedRoast === "All" && coffee.name.toLowerCase().indexOf(coffeNameInput) !== -1) {
             filteredCoffees.push(coffee);
         }
-    });
+    }
     tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+
+function addCoffee(e) {
+    e.preventDefault();
+    coffees.push({
+        name: coffeeAddName.value,
+        roast: roastAddSelection.value
+    });
+    var filteredCoffees = [];
+    for (let i = 0; i < coffees.length; i++){
+        let coffee = coffees[i];
+        filteredCoffees.push(coffee)
+    }
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+
 }
 
 
@@ -79,12 +100,21 @@ coffees.reverse();
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitNewCoffeeButton = document.querySelector('#add-submit');
+
+
+tbody.innerHTML = renderCoffees(coffees);
+
+
 var roastSelection = document.querySelector('#roast-selection');
 var roastAddSelection = document.querySelector('#addRoast-selection');
 var coffeeName =  document.querySelector('#coffee-name');
 var coffeeAddName =  document.querySelector('#add-coffeeName');
 
-tbody.innerHTML = renderCoffees(coffees);
+var roastAddSelection = document.querySelector('#addRoast-selection');
+var coffeeName =  document.querySelector('#coffee-name');
+var coffeeAddName =  document.querySelector('#add-coffeeName');
+
+
 
 submitNewCoffeeButton.addEventListener('click', addCoffee);
 
@@ -125,11 +155,14 @@ document.getElementById('stopAnim').addEventListener('click', function() {
     document.getElementsByClassName('my-main')[0].classList.remove('pulsate-bck');
 });
 
-var isColdOutside = true;
-
-var clothingToWear;
-
-clothingToWear = isColdOutside ? 'sweater and a jacket' : 'shorts and a t-shirt';
 
 
 
+submitNewCoffeeButton.addEventListener('click', addCoffee);
+
+
+submitButton.addEventListener('click', updateCoffees);
+
+roastSelection.addEventListener('change', updateCoffees);
+
+coffeeName.addEventListener('keyup', updateCoffees);

@@ -1,3 +1,4 @@
+
 *{
     /* transition:  2s; */
     background-color: transparent;
@@ -51,6 +52,21 @@ nav * {
 .jumbotron{
     height: 100vh;
     z-index: -1;
+
+{
+    transform: translate3d(10, 10, 10);
+}
+
+.my-main{
+    height: 700px;
+}
+
+
+
+div{
+
+    transition:  2s;
+
 }
 
 
@@ -61,6 +77,7 @@ nav * {
 
 }
 
+
 .form-control{
     background-color: white;
     opacity: 0.7;
@@ -69,6 +86,8 @@ nav * {
 
 
 }
+
+
 
 .waves{
 
@@ -104,6 +123,27 @@ nav * {
 
 
 }
+    animation: waves 12s linear infinite;
+    filter:blur(.3px);
+    opacity: 1;
+    bottom: 0px;
+    z-index: 2;
+
+
+
+
+
+}
+
+#mySidenav{
+    position: absolute;
+    z-index: 55;;
+}
+
+
+
+
+
 
 
 
@@ -119,6 +159,7 @@ nav * {
 
 
 
+
 .st0{
     display: none;
 }
@@ -126,6 +167,9 @@ nav * {
 
 
 .pulsate-bck {-webkit-animation:pulsate-bck 4s ease-in-out infinite both;animation:pulsate-bck 4s ease-in-out infinite both}
+
+.pulsate-bck, {-webkit-animation:pulsate-bck 4s ease-in-out infinite both;animation:pulsate-bck 4s ease-in-out infinite both}
+
 
 
 
@@ -135,6 +179,7 @@ nav * {
 
 
 .puff-in-center , #main ,h2 {-webkit-animation:puff-in-center 1s cubic-bezier(.47,0.000,.745,.715) both;animation:puff-in-center 1s cubic-bezier(.47,0.000,.745,.715) both}
+
 
 
 
@@ -232,3 +277,6 @@ html.transition *:after {
 .slide-out-blurred-top{-webkit-animation:slide-out-blurred-top .45s cubic-bezier(.755,.05,.855,.06) both;animation:slide-out-blurred-top .45s cubic-bezier(.755,.05,.855,.06) both}
 
 @-webkit-keyframes slide-out-blurred-top{0%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:translateY(-1000px) scaleY(2) scaleX(.2);transform:translateY(-1000px) scaleY(2) scaleX(.2);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}}@keyframes slide-out-blurred-top{0%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:translateY(-1000px) scaleY(2) scaleX(.2);transform:translateY(-1000px) scaleY(2) scaleX(.2);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}}
+
+@-webkit-keyframes puf
+
